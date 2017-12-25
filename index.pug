@@ -10,4 +10,52 @@ html(lang="en")
     //[if lt IE 9]> <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> <![endif]
 
   body
-    h1 Hello World!
+     
+    .landing
+      .container
+        .logo Charlotte & Valentin
+        p 
+          i Même mise en page que le faire-part : logo + date
+      
+    .menu 
+      ul 
+        li 
+          a(href="#programme") Programme
+        li 
+          a(href="#le-lieu") Lieu
+        li 
+          a(href="album-photo") Album photo
+        li 
+          a(href="#contact") Contact
+
+    .content
+      .section.program
+        a(name="programme")
+        h2 Le programme
+
+      .section.place
+        a(name="le-lieu")
+        #map
+        .address 
+          span Manoir de Kerambourg
+          span 56690 Landaul 
+
+      .section.photos
+        h2 Album photos
+
+      .section.contact
+        .container
+          h2 Contact
+          p
+            span Charlotte Tilly & Valentin Bourgoin
+            span 67 rue des Grands Champs
+            span 75020 Paris
+            span contact@charlotte-et-valentin.com
+      
+
+    script(src="js/bundle.min.js")
+    script(
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOMSK3xWWZdoI_vlFIJL9ov3NvfQGThq4&callback=initMap"
+    )

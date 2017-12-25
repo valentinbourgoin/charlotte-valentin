@@ -1,2 +1,45 @@
 @import 'base/normalize.scss'
 @import 'base/reset.scss'
+@import 'base/common.scss'
+
+// Landing section
+.landing 
+  background: url('http://api.thumbr.it/whitenoise-361x370.png?background=b3874aff&noise=ba915b&density=97&opacity=95');
+  height: 100vh;
+  text-align: center;
+  width: 100%;
+
+  .container 
+    left: 0%;
+    top: 50%;
+    position: absolute;
+    transform: translate(0%, -50%);
+    width: 100%;
+
+  .logo 
+    color: white;
+    font-weight: bold;
+
+// Menu section
+.menu 
+  padding: 1em;
+  text-align: center;
+
+  ul 
+    list-style: none;
+
+    li 
+      display: inline;
+      padding: 0 .2em;
+
+// Map section
+#map 
+  height: 100%
+  width: 100%; 
+
+
+// Contact section
+.contact 
+  p 
+    span 
+      display: block;
