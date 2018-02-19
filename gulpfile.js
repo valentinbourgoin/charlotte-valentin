@@ -125,6 +125,11 @@ gulp.task('images', function() {
   .pipe(gulp.dest('build/img/'));
 });
 
+gulp.task('fonts', function() {
+  gulp.src('fonts/**/*')
+  .pipe(gulp.dest('build/fonts/'));
+});
+
 gulp.task('setup-src', function() {
   var data = fs.readFileSync('./index.pug').toString().split("\n");
 
@@ -161,7 +166,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('setup', function() {
-  gulp.start('styles', 'templates', 'scripts', 'images', 'setup-src');
+  gulp.start('styles', 'templates', 'scripts', 'images', 'fonts', 'setup-src');
 });
 
 gulp.task('watch', function() {
@@ -169,6 +174,7 @@ gulp.task('watch', function() {
   gulp.watch(['templates/**/*', './*.pug'],        ['templates']);
   gulp.watch('js/*.js',                            ['scripts']);
   gulp.watch('img/**/*',                           ['images']);
+  gulp.watch('fonts/**/*',                         ['fonts']);
 
 // init server
   browserSync.init({

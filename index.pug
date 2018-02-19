@@ -11,11 +11,15 @@ html(lang="en")
 
   body
      
-    .landing
-      .container
-        .logo Charlotte & Valentin
-        p 
-          i Même mise en page que le faire-part : logo + date
+    .section.landing
+      .center-container
+        .logo
+          .letters 
+            span.name Charlotte
+            span.and & 
+            span.name Valentin 
+          //img(src="/img/letters.png" alt="Charlotte & Valentin")
+          .date 23.06.18
       
     .menu 
       ul 
@@ -31,23 +35,86 @@ html(lang="en")
     .content
       .section.program
         a(name="programme")
-        h2 Le programme
+        .flowers
+          .top
+          .bottom
+
+        .center-container 
+          .title Programme
+
+          ul
+            li
+              span.picto
+                img(src="/img/picto-rings.png")
+              span.moment 16h
+              span.event Cérémonie laïque dans le jardin
+            li
+              span.picto
+                img(src="/img/picto-drinks.png")
+              span.moment 18h
+              span.event Cocktail dinatoire
+            li
+              span.picto
+                img(src="/img/picto-food.png")
+              span.moment 20h
+              span.event A table !
+            li
+              span.picto
+                img(src="/img/picto-party.png")
+              span.moment 23h
+              span.event Party time
+            li
+              span.picto
+                img(src="/img/picto-truck.png")
+              span.moment 13h
+              span.event Brunch
+
+      .section.photo
 
       .section.place
         a(name="le-lieu")
-        #map
-        .address 
-          span Manoir de Kerambourg
-          span 56690 Landaul 
+        iframe(
+          src="https://www.google.com/maps/d/embed?mid=16RaFkZAxRsbMrfx09oxcIHyxCTxxEPbO&hl=fr", 
+          width="100%"
+          height="100%",
+          frameborder="0" 
+          style="border:0"
+        )
+
+        //- #map
+        //- .address 
+        //-   span Manoir de Kerambourg
+        //-   span 56690 Landaul 
 
       .section.photos
-        h2 Album photos
+        .center-container 
+          .title Album photos
+          p Partagez vos photos avec le hashtag
+            span #charlotte&valentin
+
+          ul.gallery
+            li
+              img(src="http://placehold.it/400x200")
+            li
+              img(src="http://placehold.it/400x200")
+            li
+              img(src="http://placehold.it/400x200")
+            li
+              img(src="http://placehold.it/400x200")
+            li
+              img(src="http://placehold.it/400x200")
+            li
+              img(src="http://placehold.it/400x200")
 
       .section.contact
-        .container
-          h2 Contact
-          p
-            span Charlotte Tilly & Valentin Bourgoin
+        .flowers
+          .top
+          .bottom
+
+        .center-container
+          .title Contact
+          p.address
+            span.name Charlotte Tilly & Valentin Bourgoin
             span 67 rue des Grands Champs
             span 75020 Paris
             span contact@charlotte-et-valentin.com
