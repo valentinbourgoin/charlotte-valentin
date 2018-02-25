@@ -52,12 +52,25 @@
       margin-top: -150px;
       height: 359px;
 
+    @media screen and (max-height: 650px)
+      .letters .name
+        font-size: 2.5em;
+      .letters .and 
+        font-size: 1em;
+      &:after 
+        margin-top: -230px;
+
       
 // Menu section
 .menu 
   background: url('/img/bg-craft.jpg') repeat;
   padding: 1.5em;
   text-align: center;
+  &--fixed 
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    z-index: 999;
 
   ul 
     list-style: none;
@@ -71,6 +84,10 @@
         color: white;
         text-decoration: none;
         font-size: 1.7em;
+
+  @media screen and (max-width: 520px)
+    display: none;
+
 
 // Program section
 .program 
@@ -125,12 +142,22 @@
         font-size: .9em;
         @media screen and (max-width: 520px)
           display: none;
+  
+    @media screen and (max-height: 650px)
+      li 
+        padding: .5em 0;
+
+
 
 
 // Photo menu
 .photo 
   background: url(/img/portrait.jpg) center no-repeat;
   background-size: cover;
+
+  @media screen and (max-width: 520px)
+    display: none;
+
 
 // Map section
 // #map 
@@ -160,7 +187,7 @@
     li
       position: relative;
       display: inline-block;
-      height: 200px;
+      height: 250px;
       margin-bottom: 20px;
       margin-right: 20px;
       padding: 5px;
@@ -190,6 +217,52 @@
         max-height: 100%;
         padding: 0;
 
+// Infos section
+.infos 
+  font-family: 'matterhornserif';
+
+  .title
+    margin-bottom: 50px;
+
+  p 
+    margin: auto;
+    max-width: 600px;
+    padding: 15px;
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.5em;
+
+    a 
+      color: white; 
+      text-decoration: underline;
+      &:hover 
+        text-decoration: none;
+
+    &::after 
+      content: url(/img/lettrage.png);
+      margin: 30px auto 0;
+      display: block;
+
+    &:last-of-type
+      &::after 
+        content: '';
+
+  @media screen and (max-width: 520px)
+    p 
+      font-size: .9em;
+      &::after 
+        content: '';
+        margin: 0;
+  
+  @media screen and (max-height: 650px)
+    .title 
+      margin-bottom: 20px;
+    p
+      line-height: 1.2em;
+      &::after 
+        margin: 15px auto 0;
+
+
 // Contact section
 .contact 
   font-family: 'matterhornserif';
@@ -204,4 +277,5 @@
       color: white;
       padding: .2em;
 
-      &.name
+      &.phone
+        margin-top: 1em;
